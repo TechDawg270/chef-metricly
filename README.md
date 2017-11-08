@@ -11,7 +11,7 @@ for communication with the Metricly server
 | Key | Type | Description | Default | Required |
 |-----|------|-------------|---------|----------|
 | `node['metricly']['install_flavor']` | String | OS Type - Windows or Linux | `nil`| Yes |
-| `node['metricly']['windows_agent_msi_url']` | String | URL to Windows msi installer |  'https://repos.uat.netuitive.com/windows-agent/59/X64/Release/CollectdWin-x64.msi', No |
+| `node['metricly']['windows_agent_msi_url']` | String | URL to Windows msi installer |  'https://repos.uat.netuitive.com/windows-agent/59/X64/Release/CollectdWin-x64.msi' | No |
 | `node['metricly']['windows_api_key']` | String | Company Specific API Key for Windows Integrations (differs from Linux Integration API Key) | `nil`| Yes |
 | `node['metricly']['linux_api_key']` | String | Company Specific API Key for Linux Integration (differs from Windows Integration API Key) | `nil`| Yes |
 
