@@ -1,0 +1,17 @@
+# annoying OSX files
+.DS_Store
+
+# Bundler
+Gemfile.lock
+bin/*
+.bundle/*
+
+# test kitchen
+.kitchen/
+.kitchen.local.yml
+
+# Chef Misc.
+Berksfile.lock
+.zero-knife.rb
+Policyfile.lock.json
+chefignore
