@@ -19,10 +19,29 @@ platforms:
   - name: windows-2012r2
 
 suites:
-  - name: default
+  - name: metricly-windows
+    includes:
+      - windows-2016
+      - windows-2012r2
     run_list:
       - recipe[metricly::default]
     verifier:
       inspec_tests:
         - test/smoke/default
     attributes:
+      metricly:
+        install_flavor: windows
+        windows_api_key: 123456789
+  - name: metricly-linux
+    includes:
+      - ubuntu-16.04
+      - centos-7.3
+    run_list:
+      - recipe[metricly::default]
+    verifier:
+      inspec_tests:
+        - test/smoke/default
+    attributes:
+      metricly:
+        install_flavor: linux
+        windows_api_key: 123456789
