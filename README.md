@@ -26,7 +26,9 @@ Supported and tested locally with vagrant:
 - Windows 2012R2
 - Windows 2016
 
-### Example Usage
+Example Usage
+--------------
+
 - Role Definition
 ```json
 {
@@ -37,10 +39,14 @@ Supported and tested locally with vagrant:
 }
 ```
 
-### Roadmap
+Roadmap
+-------
+
 - Add functionality to enable and configure each individual collector (configs located at `/opt/netuitive-agent/conf/collectors/<integration>`)
 
-### Contributing
+Contributing
+------------
+
 - Fork this repo
 - Commit some changes
 - Issue PR
