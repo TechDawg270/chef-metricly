@@ -1,5 +1,5 @@
-Metricly (formerly Netuitive) Cookbook (Chef)
-=============================================
+Metricly (formerly Netuitive) Chef Cookbook
+===========================================
 
 A cookbook to automate the installation and configuration of the Metricly/metricly agent for both Linux and Windows
 
