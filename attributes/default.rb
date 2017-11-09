@@ -1,5 +1,10 @@
 #install flavor
-default['metricly']['install_flavor'] = nil
+case node['platform_family']
+when 'amazon', 'rhel', 'fedora', 'debian'
+  default['metricly']['install_flavor'] = 'linux'
+when 'windows'
+  default['metricly']['install_flavor'] = 'windows'
+end
 
 # Windows Agent Installation URL
 default['metricly']['windows_agent_msi_url'] = 'https://repos.uat.netuitive.com/windows-agent/59/X64/Release/CollectdWin-x64.msi'
