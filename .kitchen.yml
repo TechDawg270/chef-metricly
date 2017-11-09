@@ -4,10 +4,6 @@ driver:
 
 provisioner:
   name: chef_zero
-  # You may wish to disable always updating cookbooks in CI or other testing environments.
-  # For example:
-  #   always_update_cookbooks: <%= !ENV['CI'] %>
-  always_update_cookbooks: true
 
 verifier:
   name: inspec
@@ -19,10 +15,7 @@ platforms:
   - name: windows-2012r2
 
 suites:
-  - name: metricly-windows
-    includes:
-      - windows-2016
-      - windows-2012r2
+  - name: metricly
     run_list:
       - recipe[metricly::default]
     verifier:
@@ -30,18 +23,5 @@ suites:
         - test/smoke/default
     attributes:
       metricly:
-        install_flavor: windows
         windows_api_key: 123456789
-  - name: metricly-linux
-    includes:
-      - ubuntu-16.04
-      - centos-7.3
-    run_list:
-      - recipe[metricly::default]
-    verifier:
-      inspec_tests:
-        - test/smoke/default
-    attributes:
-      metricly:
-        install_flavor: linux
-        windows_api_key: 123456789
+        linux_api_key: 987654321
