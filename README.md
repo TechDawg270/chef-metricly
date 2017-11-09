@@ -1,7 +1,7 @@
 Metricly (formerly Netuitive) Chef Cookbook
 ===========================================
 
-A cookbook to automate the installation and configuration of the Metricly/metricly agent for both Linux and Windows
+A cookbook to automate the installation and configuration of the Metricly/Netuitive agent for both Linux and Windows
 
 **NOTE** - This will only install the agent on Linux/Windows machines and configure the API key
 for communication with the Metricly server
